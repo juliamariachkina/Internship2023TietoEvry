@@ -1,4 +1,4 @@
-import { Box, Button, Paper, TextField, Typography } from "@mui/material";
+import { Button, Grid, Paper, TextField, Typography } from "@mui/material";
 import { useState } from "react";
 
 type Props = {
@@ -14,10 +14,10 @@ const Assignment = ({ setLocked }: Props) => {
       <Typography align="center" variant="h1">
         Home assignment for Internship 2022
       </Typography>
-      <Typography align="center" variant="h2">
+      <Typography align="center" variant="h3">
         "Continous integration jobs visualizer internship"
       </Typography>
-      <Typography sx={{ fontWeight: "bold" }} variant="h3">
+      <Typography sx={{ fontWeight: "bold" }} variant="h4">
         Personal spotify analyser:
       </Typography>
       <Typography>
@@ -33,7 +33,7 @@ const Assignment = ({ setLocked }: Props) => {
         interesting. Present analysed and computed data to the user in some
         elegant way.
       </Typography>
-      <Typography sx={{ fontWeight: "bold" }} variant="h3">
+      <Typography sx={{ fontWeight: "bold" }} variant="h4">
         Things to consider:
       </Typography>
       <Typography>
@@ -60,7 +60,7 @@ const Assignment = ({ setLocked }: Props) => {
       <Typography>
         Project is open for personalization, have fun with it!
       </Typography>
-      <Typography sx={{ fontWeight: "bold" }} variant="h3">
+      <Typography sx={{ fontWeight: "bold" }} variant="h4">
         Instructions:
       </Typography>
       <Typography>
@@ -89,7 +89,7 @@ const Assignment = ({ setLocked }: Props) => {
       >
         Unlock examples
       </Button>
-      <Typography sx={{ fontWeight: "bold" }} variant="h3">
+      <Typography sx={{ fontWeight: "bold" }} variant="h4">
         Submission:
       </Typography>
       <Typography>
@@ -97,9 +97,11 @@ const Assignment = ({ setLocked }: Props) => {
         Should you have any questions, do not hesitate to ask them via the
         email.
       </Typography>
-      <Box sx={{ pt: "50px" }}>
-        <img src="/logo.png" />
-      </Box>
+      <Grid container justifyContent="center">
+        <Grid item sx={{ pt: "30px" }}>
+          <img src="/logo.png" />
+        </Grid>
+      </Grid>
     </Paper>
   );
 };
