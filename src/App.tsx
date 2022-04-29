@@ -49,14 +49,13 @@ const App = () => {
   const [loading, setLoading] = useState(false);
   const [locked, setLocked] = useState(true);
   const cities = ["Brno", "Bratislava", "Prague", "Krakow"];
-  const appID = "7a0a4a6c1849b63b9a7f86b0b9bad20f";
 
   const handleRefreshData = () => {
     setLoading(true);
     let newData: CityTemperatures[] = [];
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/group?id=3078610,3060972,3067696,3094802&units=metric&appid=${appID}`
+        `https://api.openweathermap.org/data/2.5/group?id=3078610,3060972,3067696,3094802&units=metric&appid=${process.env.OPEN_WEATHER_API_KEY}`
       )
       .then((response) => {
         console.log(response.data.list);
