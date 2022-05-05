@@ -55,7 +55,7 @@ const App = () => {
     let newData: CityTemperatures[] = [];
     axios
       .get(
-        `https://api.openweathermap.org/data/2.5/group?id=3078610,3060972,3067696,3094802&units=metric&appid=${process.env.OPEN_WEATHER_API_KEY}`
+        `https://api.openweathermap.org/data/2.5/group?id=3078610,3060972,3067696,3094802&units=metric&appid=${process.env.REACT_APP_API_KEY}`
       )
       .then((response) => {
         console.log(response.data.list);
