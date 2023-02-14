@@ -38,8 +38,8 @@ const Example2 = ({
   return (
     <>
       <Typography variant="h6">
-        Please try to refresh not more then once. Openweather mapi supports
-        60requests/hour. If refresh does not work, this is the reason.
+        Please limit the refresh rate. Openweather API supports 1
+        request/minute.
       </Typography>
       <TableContainer component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">

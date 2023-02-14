@@ -59,14 +59,16 @@ const App = () => {
       )
       .then((response) => {
         console.log(response.data.list);
-        const data: CityTemperatures[] = response.data.list.map((obj: { [x: string]: { [x: string]: any; }; }, i: number) => {
-          return {
-            city: cities[i],
-            temp: obj["main"]["temp"],
-            fTemp: obj["main"]["feels_like"],
-            humidity: obj["main"]["humidity"],
-          };
-        });
+        const data: CityTemperatures[] = response.data.list.map(
+          (obj: { [x: string]: { [x: string]: any } }, i: number) => {
+            return {
+              city: cities[i],
+              temp: obj["main"]["temp"],
+              fTemp: obj["main"]["feels_like"],
+              humidity: obj["main"]["humidity"],
+            };
+          }
+        );
         setTemperatures(data);
         setLoading(false);
       });
